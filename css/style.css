@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dcd8d8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+#img_home {
+    max-width: 100%;
+    height: auto;
+}
+
+.box {
+    background-color: #000;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.home {
+    background-color: #666666;
+}
+
+.home p, .home ul {
+    margin: 20px 0;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.home ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.home ul li {
+    margin: 10px 0;
+}
+
+strong {
+    letter-spacing: 0.8px;
+
+}
+.titulo {
+    text-align: center;
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.titulo h2 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.e_circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease;
+}
+
+.e_circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto {
+    color: #000;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.box_filme_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box_filme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.box_filme iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.box_game {
+    text-align: center;
+}
+
+.box_game a {
+    display: inline-block;
+    background-color: #0d4703;
+    font-size: 30px;
+    color: #fff;
+    padding: 40px 60px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.box_game a:hover {
+    background-color: #fff;
+    color: #0d4703;
+}
+
+.c_texto {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.c_texto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.c_texto p {
+    margin: 20px 0;
+}
+
+.c_texto a {
+    display: inline-block;
+    background-color: #0d4703;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.c_texto a:hover {
+    background-color: #fff;
+    color: #0d4703;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    clear: both;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: none;
+    z-index: 10;
+    display: none; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.6s;
+}
+
+.carousel:hover .prev,
+.carousel:hover .next {
+    display: block; 
+}
+#show-more-btn {
+    background-color: #0d4703;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#show-more-btn:hover {
+    background-color: #fff;
+    color: #0d4703;
+}
+
+@media (max-width: 1200px) {
+    .box_filme {
+        width: calc(50% - 20px);
+    }
+
+    .box_filme iframe {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .box_filme {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .titulo h2 {
+        font-size: 20px;
+    }
+
+    .box_game a {
+        padding: 20px 40px;
+        font-size: 24px;
+    }
+
+    .home h1{
+        font-size: 22px;
+    }
+    .home p, ul {
+        font-size: 18px;
+    }
+    .partial-text li, .full-text li {
+        font-size: 17.5px; /* Tamanho dos itens da lista ajustado para 13px */
+    }
+}
+
